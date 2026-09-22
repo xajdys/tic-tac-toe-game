@@ -8,8 +8,7 @@
 
 /* neon theme styling */
 
-h1 {
-    font-size: 2.5rem;
+h1, h2 {
     margin: 2rem;
 }
 
@@ -79,4 +78,23 @@ body {
 
 .box:hover {
     background-color: hsla(340, 100%, 98%, 0.9);
+}
+
+#x-btn, #o-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #FF3F7F;
+    color: #f4e8c3;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.3rem hsla(340, 100%, 70%, 0.5);
+    border: none;
+    margin-right: 1rem;
+}
+
+.player-selection {
+    margin-bottom: -4rem;
+}
+
+#x-btn:hover, #o-btn:hover, #reset-btn:hover, #new-game-btn:hover {
+    background-color: hsl(340, 100%, 70%);
 }
