@@ -66,7 +66,7 @@ body {
     color: #FFC400;
 }
 
-#reset-btn {
+#reset-btn, #new-game-btn {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: #FF3F7F;
@@ -75,4 +75,8 @@ body {
     box-shadow: 0 0 0.3rem hsla(340, 100%, 70%, 0.5);
     border: none;
     margin-bottom: 2rem;
+}
+
+.box:hover {
+    background-color: hsla(340, 100%, 98%, 0.9);
 }
