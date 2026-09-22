@@ -1,6 +1,78 @@
 /* reset default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* neon theme styling */
+
+h1 {
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+p {
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+ul {
+    width: 50%;
+    margin: 0 auto;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+}
+
+/* body style */
+
+body {
+    background-color: #450693;
+    text-align: center;
+    color: #FFC400;
+}
+
+/* gameboard design */
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* game design */
+
+.game {
+    height: 45vmin;
+    width: 45vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 13vmin;
+    width: 13vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 0.5rem hsl(267, 92%, 70%);
+    font-size: 8vmin;
+    color: #FFC400;
+}
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #FF3F7F;
+    color: #f4e8c3;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.3rem hsla(340, 100%, 70%, 0.5);
+    border: none;
+    margin-bottom: 2rem;
 }
