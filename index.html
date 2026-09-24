@@ -11,60 +11,68 @@
 <body>
     <main>
         <!-- Greeting to the Player -->
-        <h1> Hi and Welcome to the Tic Tac Toe Game</h1>
-        <input type="text" id="player-name" placeholder="Enter your name" />
-        <button type="submit" id="submit-btn">Submit</button>
-
-        <!-- Game Rules -->
-        <p>Here are the rules of the game:</p>
-        <ul>
-            <li>Player 1 will be X</li>
-            <li>Player 2 will be O</li>
-            <li>Players take turns placing their marks on the board</li>
-            <li>
-                The first player to get 3 of their marks in a row (up, down, across, or
-                diagonally) wins
-            </li>
-            <li>
-                If all 9 squares are filled and no player has won, the game is a draw
-            </li>
-            <li>Click the "Reset Game" button to start a new game</li>
-            <li>The winner will get a cookie 🍪 !</li>
-            <li>Have fun!</li>
-        </ul>
-
-        <!-- Player 1's Selection -->
-        <div class="player-selection">
-            <h2></h2>
-            <button id="x-btn" class="mark">X</button>
-            <button id="o-btn" class="mark">O</button>
+        <div class="greeting middle">
+            <h1>TIC TAC TOE</h1>
+            <span><input type="text" id="player-name" placeholder="Enter your name..." />
+                <button type="submit" id="submit-btn">Submit</button>
+            </span>
         </div>
 
-        <!-- New Game Button -->
-        <button id="new-game-btn">New Game</button>
+        <!-- Game Rules -->
+        <div class="rules middle hide">
+            <p>Here are the rules of the game:</p>
+            <ul>
+                <li>Player 1 will be X</li>
+                <li>Player 2 will be O</li>
+                <li>Players take turns placing their marks on the board</li>
+                <li>
+                    The first player to get 3 of their marks in a row (up, down, across, or
+                    diagonally) wins
+                </li>
+                <li>
+                    If all 9 squares are filled and no player has won, the game is a draw
+                </li>
+                <li>Click the "Reset Game" button to start a new game</li>
+                <li>The winner will get a cookie 🍪 !</li>
+                <li>Have fun!</li>
+            </ul>
+        </div>
 
-        <!-- Game Board -->
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
+        <!-- Player 1's Selection -->
+        <div class="player-selection hide middle">
+            <h2>CHOOSE</h2>
+            <span>
+                <button id="x-btn" class="mark">X</button>
+                <button id="o-btn" class="mark">O</button>
+            </span>
+        </div>
+
+        <!-- Game Menu -->
+        <div class="hide">
+            <!-- New Game Button -->
+            <button id="new-game-btn" class="">New Game</button>
+
+            <!-- Game Board -->
+            <div class="container">
+                <div class="game">
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                </div>
             </div>
+
+            <!-- Reset Game Button -->
+            <button id="reset-btn">Reset Game</button>
         </div>
 
         <!-- Cookie Animation -->
-        <div>
-            Cookie 🍪 for the winner: <span id="winner-cookie"></span>
-        </div>
-
-        <!-- Reset Game Button -->
-        <button id="reset-btn">Reset Game</button>
+        <div id="cookie" class="middle hide">Cookie 🍪 for the winner:</div>
     </main>
 
     <script src="script.js"></script>
