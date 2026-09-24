@@ -3,7 +3,7 @@
     --background-color: radial-gradient(circle at top, hsl(333, 88%, 65%), #F11A7B);
     --button-color: #982176;
     --text-color: #FFE5AD;
-    --box-shadow-color: #3E001F;
+    --box-shadow-color: hsl(317, 64%, 50%);
     --button-hover-color: hsl(317, 64%, 40%);
 }
 
@@ -17,22 +17,41 @@
 
 /* neon theme styling */
 
+.middle {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
 h1,
 h2 {
     margin: 2rem;
+    color: transparent;
+    background: var(--background-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    box-shadow: 0 0 25px hsl(333, 88%, 60%);
+    border-radius: 1rem;
+    padding: 25px;
 }
 
 input {
     padding: 1rem;
     font-size: 1.25rem;
     border: none;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 0.7rem 0 0 0.7rem;
     outline: none;
     box-shadow: 0 0 0.5rem var(--box-shadow-color);
     background-color: hsl(41, 100%, 94%);
+    margin-top: 2rem;
 }
 
-input:active {
+input:focus {
     box-shadow: 0 0 0.8rem var(--box-shadow-color);
 }
 
@@ -43,18 +62,23 @@ input:active {
     border: none;
     color: var(--text-color);
     margin-left: -4px;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0.7rem 0.7rem 0;
     box-shadow: 0 0 0.5rem var(--box-shadow-color);
+    margin-top: 2rem;
 }
 
 p,
 #cookie {
     font-size: 1.25rem;
     margin: 1rem;
+    display: block;
+    width: 100%;
+    margin: 2rem;
 }
 
 #cookie {
     animation: winner 1s ease-in-out 0.2s infinite;
+    font-size: 2rem;
 }
 
 ul {
@@ -64,49 +88,37 @@ ul {
     list-style-position: inside;
     padding: 0;
     text-align: left;
+    line-height: 2rem;
 }
 
 /* body style */
 
 body {
-    background: var(--background-color);
     text-align: center;
     color: var(--text-color);
-}
-
-/* hide elements */
-
-.hide {
-    display: none;
-}
-
-/* gameboard design */
-
-.container {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: hsl(0, 0%, 5%);
+    overflow: hidden;
 }
 
 /* game design */
+.container {
+    margin: 2rem;
+    height: 65vh;
+}
 
 .game {
-    height: 45vmin;
-    width: 45vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
+    padding: 4rem;
+    margin: 2rem 6rem 2rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    gap: 0.6rem;
 }
 
 .box {
-    height: 13vmin;
-    width: 13vmin;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     border: none;
-    box-shadow: 0 0 0.5rem var(--box-shadow-color);
+    box-shadow: 0 0 0.7rem var(--box-shadow-color);
     font-size: 8vmin;
     color: var(--text-color);
     background-color: hsl(41, 100%, 94%);
@@ -120,18 +132,22 @@ body {
     font-size: 1.25rem;
     background-color: var(--button-color);
     color: var(--text-color);
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     box-shadow: 0 0 0.3rem var(--box-shadow-color);
     border: none;
     margin-bottom: 2rem;
 
 }
 
+#new-game-btn {
+    margin-top: 2rem;
+}
+
 #x-btn,
 #o-btn {
     padding: 1rem 2.5rem 1rem 2.5rem;
     margin: 1rem;
-    font-size: 600;
+    font-size: 1rem;
 }
 
 .box:hover {
@@ -155,10 +171,10 @@ body {
     }
 
     100% {
-        ransform: scale(1.5);
+        transform: scale(1.5);
     }
 }
 
-.hide{
+.hide {
     display: none !important;
 }
