@@ -1,3 +1,12 @@
+/* color variable definitions */
+:root {
+    --background-color: radial-gradient(circle at top, hsl(333, 88%, 65%), #F11A7B);
+    --button-color: #982176;
+    --text-color: #FFE5AD;
+    --box-shadow-color: #3E001F;
+    --button-hover-color: hsl(317, 64%, 40%);
+}
+
 /* reset default styles */
 
 * {
@@ -8,13 +17,44 @@
 
 /* neon theme styling */
 
-h1, h2 {
+h1,
+h2 {
     margin: 2rem;
 }
 
-p {
+input {
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    outline: none;
+    box-shadow: 0 0 0.5rem var(--box-shadow-color);
+    background-color: hsl(41, 100%, 94%);
+}
+
+input:active {
+    box-shadow: 0 0 0.8rem var(--box-shadow-color);
+}
+
+#submit-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--button-color);
+    border: none;
+    color: var(--text-color);
+    margin-left: -4px;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0 0 0.5rem var(--box-shadow-color);
+}
+
+p,
+#cookie {
     font-size: 1.25rem;
     margin: 1rem;
+}
+
+#cookie {
+    animation: winner 1s ease-in-out 0.2s infinite;
 }
 
 ul {
@@ -29,9 +69,15 @@ ul {
 /* body style */
 
 body {
-    background-color: #450693;
+    background: var(--background-color);
     text-align: center;
-    color: #FFC400;
+    color: var(--text-color);
+}
+
+/* hide elements */
+
+.hide {
+    display: none;
 }
 
 /* gameboard design */
@@ -60,41 +106,59 @@ body {
     width: 13vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 0.5rem hsl(267, 92%, 70%);
+    box-shadow: 0 0 0.5rem var(--box-shadow-color);
     font-size: 8vmin;
-    color: #FFC400;
+    color: var(--text-color);
+    background-color: hsl(41, 100%, 94%);
 }
 
-#reset-btn, #new-game-btn {
+#reset-btn,
+#new-game-btn,
+#x-btn,
+#o-btn {
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: #FF3F7F;
-    color: #f4e8c3;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border-radius: 1rem;
-    box-shadow: 0 0 0.3rem hsla(340, 100%, 70%, 0.5);
+    box-shadow: 0 0 0.3rem var(--box-shadow-color);
     border: none;
     margin-bottom: 2rem;
+
+}
+
+#x-btn,
+#o-btn {
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    margin: 1rem;
+    font-size: 600;
 }
 
 .box:hover {
-    background-color: hsla(340, 100%, 98%, 0.9);
+    background-color: hsl(41, 100%, 90%);
+    cursor: pointer;
 }
 
-#x-btn, #o-btn {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    background-color: #FF3F7F;
-    color: #f4e8c3;
-    border-radius: 1rem;
-    box-shadow: 0 0 0.3rem hsla(340, 100%, 70%, 0.5);
-    border: none;
-    margin-right: 1rem;
+
+#reset-btn:hover,
+#new-game-btn:hover,
+#submit-btn:hover,
+#x-btn:hover,
+#o-btn:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
 }
 
-.player-selection {
-    margin-bottom: -4rem;
+@keyframes winner {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        ransform: scale(1.5);
+    }
 }
 
-#x-btn:hover, #o-btn:hover, #reset-btn:hover, #new-game-btn:hover {
-    background-color: hsl(340, 100%, 70%);
+.hide{
+    display: none !important;
 }
