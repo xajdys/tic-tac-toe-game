@@ -28,16 +28,21 @@
 
 h1,
 h2 {
-    margin: 2rem;
     color: transparent;
     background: var(--background-color);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 5rem;
     box-shadow: 0 0 25px hsl(333, 88%, 60%);
     border-radius: 1rem;
     padding: 25px;
+}
+
+h1 {
+    margin-top: -10rem;
+}
+
+h2 {
+    font-size: 4rem;
 }
 
 input {
@@ -67,6 +72,20 @@ input:focus {
     margin-top: 2rem;
 }
 
+.greeting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    margin-top: -35rem;
+}
+
 p,
 #cookie {
     font-size: 1.25rem;
@@ -91,6 +110,10 @@ ul {
     line-height: 2rem;
 }
 
+span {
+    margin-top: 2rem;
+}
+
 /* body style */
 
 body {
@@ -101,18 +124,20 @@ body {
 }
 
 /* game design */
-.container {
-    margin: 2rem;
+/* .container {
+    margin: -1rem auto;
     height: 65vh;
-}
+    width: 45vw;
+} */
 
 .game {
     padding: 4rem;
-    margin: 2rem 6rem 2rem 6rem;
+    margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 100%;
-    gap: 0.6rem;
+    height: 25rem;
+    gap: 0.3rem;
+    width: 25rem;
 }
 
 .box {
@@ -122,12 +147,13 @@ body {
     font-size: 8vmin;
     color: var(--text-color);
     background-color: hsl(41, 100%, 94%);
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
-#reset-btn,
-#new-game-btn,
-#x-btn,
-#o-btn {
+/* hovers, animations, styling */
+button {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: var(--button-color);
@@ -136,7 +162,6 @@ body {
     box-shadow: 0 0 0.3rem var(--box-shadow-color);
     border: none;
     margin-bottom: 2rem;
-
 }
 
 #new-game-btn {
@@ -144,7 +169,8 @@ body {
 }
 
 #x-btn,
-#o-btn {
+#o-btn,
+#okay-btn {
     padding: 1rem 2.5rem 1rem 2.5rem;
     margin: 1rem;
     font-size: 1rem;
@@ -156,14 +182,17 @@ body {
 }
 
 
-#reset-btn:hover,
-#new-game-btn:hover,
-#submit-btn:hover,
-#x-btn:hover,
-#o-btn:hover {
+button:hover {
     background-color: var(--button-hover-color);
     cursor: pointer;
 }
+
+#x-btn:hover,
+#o-btn:hover {
+    transform: scale(1.1);
+}
+
+/* animations */
 
 @keyframes winner {
     0% {
@@ -175,6 +204,98 @@ body {
     }
 }
 
+@keyframes title-ani {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    25% {
+        opacity: 0.25;
+        transform: transformX(-10rem);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: transformX(-20rem);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: transformX(-30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-45rem);
+    }
+}
+
+@keyframes input-ani {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    25% {
+        opacity: 0.25;
+        transform: transformX(10rem);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: transformX(20rem);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: transformX(30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(45rem);
+    }
+}
+
+#block {
+    width: 80%;
+    display: block;
+}
+
 .hide {
     display: none !important;
+}
+
+.rule{
+    box-shadow: 0 0 20px hsl(0, 0%, 20%);
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+
+#rules-btn {
+    padding: 1rem 2.5rem;
+}
+
+#reset-btn{
+    margin-left: 2rem;
+}
+
+#dial-okay-btn {
+    margin-top: 0.8rem;
+    padding: 0.7rem 1rem;
+}
+
+#dialog-box{
+    background-color: hsl(0, 0%, 5%);
+    overflow: hidden;
+    color: var(--text-color);
+    border: none;
+    box-shadow: 0 0 20px hsl(0, 0%, 20%);
+    border-radius: 1rem;
+    width: 90%;
+    height: 75%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
 }
