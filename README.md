@@ -1,5 +1,7 @@
-# tic-tac-toe-game
-Tic Tac Toe Games using vanilla js
+# Neon Theme Tic Tac Toe Game with Animations
+Tic Tac Toe Games using vanilla JS
+
+![welcome](web_snaps\welcome.png)
 
 # JavaScript Flow
 
@@ -63,3 +65,8 @@ Switch player
    ↓
 Wait for next click
 ```
+![welcome](web_snaps\welcome.png)
+![rules](web_snaps\rules.png)
+![choose](web_snaps\choose.png)
+![dialog](web_snaps\dialog.png)
+![cookie](web_snaps\cookie.png)
