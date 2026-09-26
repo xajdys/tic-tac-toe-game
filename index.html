@@ -11,31 +11,36 @@
 <body>
     <main>
         <!-- Greeting to the Player -->
-        <div class="greeting middle">
-            <h1>TIC TAC TOE</h1>
-            <span><input type="text" id="player-name" placeholder="Enter your name..." />
-                <button type="submit" id="submit-btn">Submit</button>
-            </span>
+        <div class="greeting">
+            <h1 id="block">TIC TAC TOE</h1>
+            <form>
+                <input type="text" id="player-name" required placeholder="Enter your name..." />
+                <button id="submit-btn">Submit</button>
+            </form>
         </div>
 
         <!-- Game Rules -->
         <div class="rules middle hide">
-            <p>Here are the rules of the game:</p>
-            <ul>
-                <li>Player 1 will be X</li>
-                <li>Player 2 will be O</li>
-                <li>Players take turns placing their marks on the board</li>
-                <li>
-                    The first player to get 3 of their marks in a row (up, down, across, or
-                    diagonally) wins
-                </li>
-                <li>
-                    If all 9 squares are filled and no player has won, the game is a draw
-                </li>
-                <li>Click the "Reset Game" button to start a new game</li>
-                <li>The winner will get a cookie 🍪 !</li>
-                <li>Have fun!</li>
-            </ul>
+            <div class="rule">
+                <p id="name">Player, Here are the rules of the game:</p>
+                <ul>
+                    <li>Player 1 will be X</li>
+                    <li>Player 2 will be O</li>
+                    <li>Players take turns placing their marks on the board</li>
+                    <li>
+                        The first player to get 3 of their marks in a row (up, down, across, or
+                        diagonally) wins
+                    </li>
+                    <li>
+                        If all 9 squares are filled and no player has won, the game is a draw
+                    </li>
+                    <li>Click the "Reset Game" button to start a new game</li>
+                    <li>The winner will get a cookie 🍪 !</li>
+                    <li>Have fun!</li>
+
+                    <button id="okay-btn">Okay</button>
+                    </ul>
+            </div>
         </div>
 
         <!-- Player 1's Selection -->
@@ -48,12 +53,12 @@
         </div>
 
         <!-- Game Menu -->
-        <div class="hide">
+        <div class="game-board hide">
             <!-- New Game Button -->
             <button id="new-game-btn" class="">New Game</button>
 
             <!-- Game Board -->
-            <div class="container">
+            <!-- <div class="container"> -->
                 <div class="game">
                     <button class="box"></button>
                     <button class="box"></button>
@@ -65,10 +70,32 @@
                     <button class="box"></button>
                     <button class="box"></button>
                 </div>
-            </div>
 
-            <!-- Reset Game Button -->
-            <button id="reset-btn">Reset Game</button>
+            <!-- Rules Dialog & Reset Game Buttons -->
+            <span>
+                <button id="dial-rules-btn">Rules</button>
+                <dialog id="dialog-box">
+                    <p id="name">Player, Here are the rules of the game:</p>
+                <ul>
+                    <li>Player 1 will be X</li>
+                    <li>Player 2 will be O</li>
+                    <li>Players take turns placing their marks on the board</li>
+                    <li>
+                        The first player to get 3 of their marks in a row (up, down, across, or
+                        diagonally) wins
+                    </li>
+                    <li>
+                        If all 9 squares are filled and no player has won, the game is a draw
+                    </li>
+                    <li>Click the "Reset Game" button to start a new game</li>
+                    <li>The winner will get a cookie 🍪 !</li>
+                    <li>Have fun!</li>
+
+                    <button id="dial-okay-btn">Okay</button>
+                    </ul>
+                </dialog>
+                <button id="reset-btn">Reset Game</button>
+            </span>
         </div>
 
         <!-- Cookie Animation -->
