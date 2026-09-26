@@ -84,6 +84,7 @@ input:focus {
 
 form {
     margin-top: -35rem;
+    width: 100%;
 }
 
 p,
@@ -257,7 +258,7 @@ button:hover {
 }
 
 #block {
-    width: 80%;
+    width: 40vw;
     display: block;
 }
 
